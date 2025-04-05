@@ -1,4 +1,4 @@
-import { bootstrapCameraKit } from "@snap/camera-kit";
+import { bootstrapCameraKit, createMediaStreamSource } from "@snap/camera-kit";
 
 console.log('Iniciando filtro')
 
@@ -14,13 +14,17 @@ async function iniciarCameraKit() {
   const session = await cameraKit.createSession({ liveRenderTarget })
 
 
-  const mediaStrem = await navigator.mediaDevices.getUserMedia({
-      video: true
+  const mediaStream = await navigator.mediaDevices.getUserMedia({
+    video: true
   })
 
-  await session.setSource(mediaStrem);
-  await session.play();
+  const source = createMediaStreamSource(mediaStream, {
+    cameraType: "environment"
+  })
 
+
+  await session.setSource(source);
+  await session.play();
 
   const lensId = '2afe5bd9-a6c0-4909-a0f4-5cd78087acef';
   const groupId = '0cab842a-6538-4e76-b6d5-3b413c13ccec';
