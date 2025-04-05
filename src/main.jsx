@@ -5,7 +5,7 @@ console.log('Iniciando filtro')
 async function iniciarCameraKit() {
 
   const cameraKit = await bootstrapCameraKit({
-    apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzI2MTY3ODgwLCJzdWIiOiJhZTUwMjhjYy0yODY5LTRkZGItODA5YS01YTk0OWFhN2UxZjh-U1RBR0lOR35mMTRhYjAwMy0wNzliLTRmOTEtYTFjZi1iYWQ1MjhhN2NjNWIifQ.ab6GbBUpKPnfWpqp9DRW0C4HUfwk4laumSTCu8NetEQ'
+    apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzI2MTY3ODgwLCJzdWIiOiJhZTUwMjhjYy0yODY5LTRkZGItODA5YS01YTk0OWFhN2UxZjh-UFJPRFVDVElPTn5lOWExZmY1Ny1mNzMxLTQyZWItOTU4Yy1mOTRiMDNkMjg5MGUifQ.8VZvHbSRBz7fnDswEvka-L-7RgeUnA9D1tAWY7ekF6k'
   });
 
   console.log('API CARREGADA');
