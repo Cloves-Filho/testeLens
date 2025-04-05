@@ -16,15 +16,15 @@ async function iniciarCameraKit() {
 
   const mediaStream = await navigator.mediaDevices.getUserMedia({
     video: {
-      facingMode: { exact: 'environment' }
+      video: true,
+      facingMode: 'environment',
     }
   });
   
 
   const source = createMediaStreamSource(mediaStream, {
-    cameraType: "environment"
+    cameraType: 'environment',
   })
-
 
   await session.setSource(source);
   await session.play();
@@ -33,9 +33,6 @@ async function iniciarCameraKit() {
   const groupId = '0cab842a-6538-4e76-b6d5-3b413c13ccec';
   const lens = await cameraKit.lensRepository.loadLens(lensId, groupId);
   session.applyLens(lens);
-
-
- 
 
 }
 
