@@ -15,8 +15,11 @@ async function iniciarCameraKit() {
 
 
   const mediaStream = await navigator.mediaDevices.getUserMedia({
-    video: true
-  })
+    video: {
+      facingMode: { exact: 'environment' }
+    }
+  });
+  
 
   const source = createMediaStreamSource(mediaStream, {
     cameraType: "environment"
