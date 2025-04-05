@@ -22,7 +22,7 @@ async function iniciarCameraKit() {
   await session.play();
 
 
-  const lensId = '8664fa86-abb0-4074-8ed7-47d4fda0c2c6';
+  const lensId = '2afe5bd9-a6c0-4909-a0f4-5cd78087acef';
   const groupId = '0cab842a-6538-4e76-b6d5-3b413c13ccec';
   const lens = await cameraKit.lensRepository.loadLens(lensId, groupId);
   session.applyLens(lens);
